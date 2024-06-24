@@ -13,6 +13,7 @@ export const getResetTokenByToken = async (token: string) => {
       return null;
    }
 };
+
 export const getResetTokenByEmail = async (email: string) => {
    try {
       const resetToken = await prisma.passwordResetToken.findFirst({
